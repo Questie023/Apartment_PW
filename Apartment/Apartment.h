@@ -47,6 +47,10 @@ public:
     bool isCornerApartment() const;
     void setCornerApartment(bool cornerApartment);
 
+    friend std::istream& operator>>(std::istream& in, Apartment& apartment);
+    friend std::ostream& operator<<(std::ostream& out, const Apartment& apartment);
+    bool operator==(const Apartment& other) const;
+
 };
 
 #endif
