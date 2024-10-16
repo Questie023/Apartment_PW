@@ -1,6 +1,6 @@
 #include "Apartment.h"
 
-#include <iostream>
+#include <iostream> //копія в приватний реп
 #include <string>
 
 Apartment::Apartment()
