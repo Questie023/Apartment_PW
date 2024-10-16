@@ -130,7 +130,7 @@ int main() {
     std::cout << "Перша квартира:\n" << object1 << std::endl;
     std::cout << "Друга квартира:\n" << object2 << std::endl;
 
-    if (object1 == object2) {
+    if (object1 == object2) {//overload operator ==
         std::cout << "Квартири однакові!" << std::endl;
     }
     else {
