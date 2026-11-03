@@ -1,6 +1,6 @@
 #include "Apartment.h"
 
-#include <iostream> //êîï³ÿ â ïğèâàòíèé ğåï
+#include <iostream> //ĞºĞ¾Ğ¿Ñ–Ñ Ğ² Ğ¿Ñ€Ğ¸Ğ²Ğ°Ñ‚Ğ½Ğ¸Ğ¹ Ñ€ĞµĞ¿
 #include <string>
 
 Apartment::Apartment()
@@ -84,36 +84,36 @@ void Apartment::setCornerApartment(bool cornerApartment) {
 }
 
 std::istream& operator>>(std::istream& in, Apartment& apartment) {
-    std::cout << "Ââåä³òü id: ";
+    std::cout << "Ğ’Ğ²ĞµĞ´Ñ–Ñ‚ÑŒ id: ";
     in >> apartment.id;
-    std::cout << "Ââåä³òü íîìåğ êâàğòèğè: ";
+    std::cout << "Ğ’Ğ²ĞµĞ´Ñ–Ñ‚ÑŒ Ğ½Ğ¾Ğ¼ĞµÑ€ ĞºĞ²Ğ°Ñ€Ñ‚Ğ¸Ñ€Ğ¸: ";
     in >> apartment.number;
-    std::cout << "Ââåä³òü ïëîùó: ";
+    std::cout << "Ğ’Ğ²ĞµĞ´Ñ–Ñ‚ÑŒ Ğ¿Ğ»Ğ¾Ñ‰Ñƒ: ";
     in >> apartment.area;
-    std::cout << "Ââåä³òü ïîâåğõ: ";
+    std::cout << "Ğ’Ğ²ĞµĞ´Ñ–Ñ‚ÑŒ Ğ¿Ğ¾Ğ²ĞµÑ€Ñ…: ";
     in >> apartment.floor;
-    std::cout << "Ââåä³òü ê³ëüê³ñòü ê³ìíàò: ";
+    std::cout << "Ğ’Ğ²ĞµĞ´Ñ–Ñ‚ÑŒ ĞºÑ–Ğ»ÑŒĞºÑ–ÑÑ‚ÑŒ ĞºÑ–Ğ¼Ğ½Ğ°Ñ‚: ";
     in >> apartment.roomCount;
-    std::cout << "Ââåä³òü âóëèöş: ";
+    std::cout << "Ğ’Ğ²ĞµĞ´Ñ–Ñ‚ÑŒ Ğ²ÑƒĞ»Ğ¸Ñ†Ñ: ";
     in.ignore();
     std::getline(in, apartment.street);
-    std::cout << "×è º ñîíÿ÷íà ñòîğîíà (1 - òàê, 0 - í³): ";
+    std::cout << "Ğ§Ğ¸ Ñ” ÑĞ¾Ğ½ÑÑ‡Ğ½Ğ° ÑÑ‚Ğ¾Ñ€Ğ¾Ğ½Ğ° (1 - Ñ‚Ğ°Ğº, 0 - Ğ½Ñ–): ";
     in >> apartment.sunnySide;
-    std::cout << "×è º êóòîâà êâàğòèğà (1 - òàê, 0 - í³): ";
+    std::cout << "Ğ§Ğ¸ Ñ” ĞºÑƒÑ‚Ğ¾Ğ²Ğ° ĞºĞ²Ğ°Ñ€Ñ‚Ğ¸Ñ€Ğ° (1 - Ñ‚Ğ°Ğº, 0 - Ğ½Ñ–): ";
     in >> apartment.cornerApartment;
 
     return in;
 }
 
 std::ostream& operator<<(std::ostream& out, const Apartment& apartment) {
-    out << "ID êâàğòèğè: " << apartment.id << "\n";
-    out << "Íîìåğ êâàğòèğè: " << apartment.number << "\n";
-    out << "Ïëîùà: " << apartment.area << " êâ.ì\n";
-    out << "Ïîâåğõ: " << apartment.floor << "\n";
-    out << "Ê³ëüê³ñòü ê³ìíàò: " << apartment.roomCount << "\n";
-    out << "Âóëèöÿ: " << apartment.street << "\n";
-    out << "Ñîíÿ÷íà ñòîğîíà: " << (apartment.sunnySide ? "Òàê" : "Í³") << "\n";
-    out << "Êóòîâà êâàğòèğà: " << (apartment.cornerApartment ? "Òàê" : "Í³") << "\n";
+    out << "ID ĞºĞ²Ğ°Ñ€Ñ‚Ğ¸Ñ€Ğ¸: " << apartment.id << "\n";
+    out << "ĞĞ¾Ğ¼ĞµÑ€ ĞºĞ²Ğ°Ñ€Ñ‚Ğ¸Ñ€Ğ¸: " << apartment.number << "\n";
+    out << "ĞŸĞ»Ğ¾Ñ‰Ğ°: " << apartment.area << " ĞºĞ².Ğ¼\n";
+    out << "ĞŸĞ¾Ğ²ĞµÑ€Ñ…: " << apartment.floor << "\n";
+    out << "ĞšÑ–Ğ»ÑŒĞºÑ–ÑÑ‚ÑŒ ĞºÑ–Ğ¼Ğ½Ğ°Ñ‚: " << apartment.roomCount << "\n";
+    out << "Ğ’ÑƒĞ»Ğ¸Ñ†Ñ: " << apartment.street << "\n";
+    out << "Ğ¡Ğ¾Ğ½ÑÑ‡Ğ½Ğ° ÑÑ‚Ğ¾Ñ€Ğ¾Ğ½Ğ°: " << (apartment.sunnySide ? "Ğ¢Ğ°Ğº" : "ĞÑ–") << "\n";
+    out << "ĞšÑƒÑ‚Ğ¾Ğ²Ğ° ĞºĞ²Ğ°Ñ€Ñ‚Ğ¸Ñ€Ğ°: " << (apartment.cornerApartment ? "Ğ¢Ğ°Ğº" : "ĞÑ–") << "\n";
     return out;
 }
 
@@ -127,14 +127,14 @@ int main() {
 
     std::cin >> object1 >> object2;
 
-    std::cout << "Ïåğøà êâàğòèğà:\n" << object1 << std::endl;
-    std::cout << "Äğóãà êâàğòèğà:\n" << object2 << std::endl;
+    std::cout << "ĞŸĞµÑ€ÑˆĞ° ĞºĞ²Ğ°Ñ€Ñ‚Ğ¸Ñ€Ğ°:\n" << object1 << std::endl;
+    std::cout << "Ğ”Ñ€ÑƒĞ³Ğ° ĞºĞ²Ğ°Ñ€Ñ‚Ğ¸Ñ€Ğ°:\n" << object2 << std::endl;
 
     if (object1 == object2) {//overload operator ==
-        std::cout << "Êâàğòèğè îäíàêîâ³!" << std::endl;
+        std::cout << "ĞšĞ²Ğ°Ñ€Ñ‚Ğ¸Ñ€Ğ¸ Ğ¾Ğ´Ğ½Ğ°ĞºĞ¾Ğ²Ñ–!" << std::endl;
     }
     else {
-        std::cout << "Êâàğòèğè ğ³çí³!" << std::endl;
+        std::cout << "ĞšĞ²Ğ°Ñ€Ñ‚Ğ¸Ñ€Ğ¸ Ñ€Ñ–Ğ·Ğ½Ñ–!" << std::endl;
     }
 
     return 0;
